@@ -112,7 +112,7 @@ fun SignUpScreen(db: AppDatabase, onRegistered: () -> Unit) {
                 Text("Female")
             }
 
-            Spacer(modifier = Modifier.height(24.dp)) // Increased spacing since Dropdown is removed
+            Spacer(modifier = Modifier.height(24.dp))
 
             Button(
                 onClick = {
@@ -126,12 +126,13 @@ fun SignUpScreen(db: AppDatabase, onRegistered: () -> Unit) {
                         return@Button
                     }
 
-                    // Email format validation (Must contain @ and a valid domain)
+                    // Email format validation
                     if (!Patterns.EMAIL_ADDRESS.matcher(email.trim()).matches()) {
                         Toast.makeText(context, "Invalid email format", Toast.LENGTH_SHORT).show()
                         return@Button
                     }
 
+                    // Passowrd validation
                     if (password.length < 8) {
                         Toast.makeText(context, "Password must be at least 8 characters", Toast.LENGTH_SHORT).show()
                         return@Button

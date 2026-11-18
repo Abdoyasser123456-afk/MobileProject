@@ -169,9 +169,7 @@ fun MenuScreen(
                             selected = selectedNavItem == 3,
                             onClick = {
                                 selectedNavItem = 3
-                                val intent = Intent(context, ProfileActivity::class.java).apply {
-                                    putExtra("userId", userId)
-                                }
+                                val intent = Intent(context, ProfileActivity::class.java).apply { putExtra("userId", userId) }
                                 context.startActivity(intent)
                             }
                         )

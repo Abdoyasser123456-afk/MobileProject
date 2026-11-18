@@ -61,7 +61,6 @@ fun CartScreen(db: AppDatabase, userId: Long, onCheckout: (String) -> Unit) {
     val cartItems by db.cartDao().getCartItems(userId).collectAsState(initial = emptyList())
     var showMenu by remember { mutableStateOf(false) }
 
-    // حساب الإجمالي بدقة
     val total = cartItems.sumOf { it.price * it.qty }
 
     AppBackground {

@@ -121,12 +121,10 @@ interface OrderDao {
     @Query("DELETE FROM cart_items WHERE userId = :userId")
     suspend fun clearUserCart(userId: Long)
 
-    // Retrieve all past orders for a specific user along with their dish details
     @Transaction
     @Query("SELECT * FROM orders WHERE userId = :userId ORDER BY timestamp DESC")
     fun getUserOrders(userId: Long): Flow<List<OrderWithItems>>
 
-    // Retrieve all orders (for admin management)
     @Transaction
     @Query("SELECT * FROM orders ORDER BY timestamp DESC")
     fun getAllOrders(): Flow<List<OrderWithItems>>

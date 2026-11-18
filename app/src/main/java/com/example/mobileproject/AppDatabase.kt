@@ -42,7 +42,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "restaurant_database"
                 )
-                    .fallbackToDestructiveMigration() // Safely handles schema changes during development by recreating tables
+                    .fallbackToDestructiveMigration()
                     .addCallback(DatabaseCallback())
                     .build()
 

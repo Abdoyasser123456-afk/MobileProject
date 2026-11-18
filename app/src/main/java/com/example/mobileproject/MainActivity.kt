@@ -49,7 +49,6 @@ class MainActivity : ComponentActivity() {
                         finish()
                     },
                     onGoToSignUp = {
-                        // Explicit Intent to navigate to SignUpActivity
                         startActivity(Intent(this, SignUpActivity::class.java))
                     }
                 )

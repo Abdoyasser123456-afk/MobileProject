@@ -8,7 +8,7 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 import androidx.room.Relation
 
-// User Entity Model
+// User Entity
 @Entity(
     tableName = "users",
     indices = [Index(value = ["email"], unique = true)]
@@ -24,7 +24,7 @@ data class User(
     val role: String
 )
 
-// Dish Entity Model
+// Dish Entity
 @Entity(tableName = "dishes")
 data class Dish(
     @PrimaryKey(autoGenerate = true)
@@ -37,7 +37,7 @@ data class Dish(
     val protein: Double = 0.0
 )
 
-// Cart Entity Model
+// Cart Entity
 @Entity(
     tableName = "cart_items",
     indices = [Index(value = ["userId", "dishId"], unique = true)]
@@ -52,7 +52,7 @@ data class CartItem(
     var qty: Int
 )
 
-// Favourite Entity Model
+// Favourite Entity
 @Entity(
     tableName = "favourite_items",
     indices = [Index(value = ["userId", "dishId"], unique = true)]

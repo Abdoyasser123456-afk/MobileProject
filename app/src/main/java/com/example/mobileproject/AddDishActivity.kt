@@ -133,7 +133,7 @@ fun AddEditDishScreen(
 
                 Spacer(modifier = Modifier.height(12.dp))
 
-                // Category Dropdown
+                // Category
                 ExposedDropdownMenuBox(
                     expanded = expanded,
                     onExpandedChange = { expanded = !expanded }
