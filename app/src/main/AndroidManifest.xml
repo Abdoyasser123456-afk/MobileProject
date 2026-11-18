@@ -23,6 +23,11 @@
         <activity android:name=".AddDishActivity" android:exported="false" />
         <activity android:name=".CartActivity" android:exported="false" />
         <activity android:name=".FavouritesActivity" android:exported="false" />
+
+
+        <activity android:name=".CheckoutActivity" android:exported="false" />
+        <activity android:name=".OrderConfirmationActivity" android:exported="false" />
+
     </application>
 
 </manifest>
