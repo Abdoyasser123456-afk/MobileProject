@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpActivity" android:exported="false" />
+        <activity android:name=".MenuActivity" android:exported="false" />
+        <activity android:name=".AddDishActivity" android:exported="false" />
     </application>
 
 </manifest>
